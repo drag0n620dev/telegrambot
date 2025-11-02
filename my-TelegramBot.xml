@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TelegramBot</Name>
+  <Repository>drag0n620/telegrambot:1.0</Repository>
+  <Registry>https://github.com/drag0n620dev/telegrambot</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1761852946</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Volume" Target="/opt/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/telegrambottest</Config>
+  <Config Name="Variable: BOT_TOKEN" Target="BOT_TOKEN" Default="AAAA:123456" Mode="" Description="Your Telegram API KEY" Type="Variable" Display="always" Required="true" Mask="false">12345:ABCDEFG</Config>
+  <Config Name="Variable: CHAT_ID" Target="CHAT_ID" Default="123456789" Mode="" Description="Targeted Chat ID" Type="Variable" Display="always" Required="true" Mask="false">123456789</Config>
+  <Config Name="Variable: BUNDESLAND" Target="BUNDESLAND" Default="RP" Mode="" Description="The province you are in" Type="Variable" Display="always" Required="true" Mask="false">RP</Config>
+  <TailscaleStateDir/>
+</Container>
