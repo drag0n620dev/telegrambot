@@ -10,8 +10,9 @@ import os
 BOT_TOKEN = os.getenv("BOT_TOKEN", "DEIN_DEFAULT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID", "123456789"))
 Bundesland = os.getenv("BUNDESLAND", "RP")
-Debugging = os.getenv("Debugging", "False")
-
+Debugging = os.getenv("DEBUGGING", "False")
+Hour = int(os.getenv("HOUR", "5"))
+Minute = int(os.getenv("MINUTE", "20"))
 
 # Logging aktivieren
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -115,10 +116,10 @@ def main():
     
     if Debugging == "True":
         # Test
-        scheduler.add_job(send_message, "interval", seconds=30)
+        scheduler.add_job(send_message, "interval", seconds=Minute)
     else:
         # Scheduler starten (täglich um 4:40 Uhr)
-        scheduler.add_job(send_message, "cron", hour=4, minute=40)
+        scheduler.add_job(send_message, "cron", hour=Hour, minute=Minute)
 
     scheduler.start()
 
