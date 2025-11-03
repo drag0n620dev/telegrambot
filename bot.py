@@ -9,16 +9,17 @@ import os
 # === Einstellungen ===
 BOT_TOKEN = os.getenv("BOT_TOKEN", "DEIN_DEFAULT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID", "123456789"))
+Timezone= os.getenv("TIMEZONE", "Europe/Berlin")
 Bundesland = os.getenv("BUNDESLAND", "RP")
-Debugging = os.getenv("DEBUGGING", "False")
 Hour = int(os.getenv("HOUR", "5"))
 Minute = int(os.getenv("MINUTE", "20"))
+Debugging = os.getenv("DEBUGGING", "False")
 
 # Logging aktivieren
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # Scheduler als Hintergrundprozess
-scheduler = BackgroundScheduler(timezone="Europe/Berlin")
+scheduler = BackgroundScheduler(timezone=Timezone)
 
 # === Globale Status-Variable ===
 # True = Nachricht senden, False = nicht senden
